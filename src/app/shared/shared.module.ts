@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SliderComponent } from './slider/slider.component';
 import { LoaderComponent } from './loader/loader.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    HomeComponent,
     SliderComponent,
-    LoaderComponent
+    LoaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +24,10 @@ import { LoaderComponent } from './loader/loader.component';
     HttpClientModule,
   ],
   exports:[
-    LoaderComponent
+    LoaderComponent,
+    HeaderComponent,
+    FooterComponent,
+    SliderComponent
   ]
 })
 export class SharedModule { }

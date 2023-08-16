@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './content/home/home.component';
 import { LoginComponent } from './validation/login/login.component';
 import { RegisterComponent } from './validation/register/register.component';
-import { HomeComponent } from './shared/home/home.component';
+import { ClassificationsComponent } from './content/classifications/classifications.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
   {path:"home", component:HomeComponent},
   {path:"login", component:LoginComponent},
   {path:"register", component:RegisterComponent},
+  {path:"classification", component:  ClassificationsComponent},
+
 // {path:"**", redirectTo:'all', pathMatch:'full'},
 ];
 

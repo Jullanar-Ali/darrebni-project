@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ValidationModule } from './validation/validation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContentModule } from "./content/content.module";
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         FormsModule,
         ValidationModule,
         BrowserAnimationsModule,
+        ContentModule
     ]
 })
 export class AppModule { }

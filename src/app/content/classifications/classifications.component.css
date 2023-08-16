@@ -1,0 +1,46 @@
+.slider {
+width: 300px;
+height: 300px;
+margin: 3rem 10rem !important;
+}
+
+.buttons{
+text-align: center;
+margin: 6rem 0 2rem 0 !important;
+}
+.buttons .btn{
+color: white;
+padding: 0.5rem 2rem;
+border-radius: 1;
+font-size: 20px;
+font-family: 'Alexandria';
+font-weight: 200;
+}
+.buttons .btn1{
+    background-color: #6F2877;
+    
+}
+.buttons .btn2{
+    background-color: #20C4F4;
+    
+}
+ h3{
+    text-align: center;
+    margin: 3rem 0 1rem 0 !important;
+    color: #464547;
+}
+.collection{
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+}
+.collection button{
+    border: 2px solid #6F2877;
+    border-radius: 5px;
+    background-color: white;
+    color: #464547;
+    font-weight: 200;
+
+
+}
+
