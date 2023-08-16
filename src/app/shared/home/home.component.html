@@ -1,0 +1,85 @@
+<app-header></app-header>
+<div class="container" *ngIf="!loading">
+    <div class="home-container">
+        <div class="head-home">
+            <app-slider></app-slider>
+            <div class="content">
+                <h3>طريقك الأسهل لإجتياز الفحص الوطني الموحد </h3>
+                <p> اصبح بامكانك الحصول على اسئلة الامتحان الوطني بكل سهولة من مكان واحد فقط "اطلع- اختبر -احصل على
+                    "النتيجة</p>
+                <button class="btn" routerLink="/register" >ابدأ الآن</button>
+            </div>
+        </div>
+        <div class="home">
+            <div class="top">
+                <h1>الاختصاصات</h1>
+                <div class="collection">
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="assets/ic_doctor.svg" alt="">
+                            <h3>الطب البشري</h3>
+                        </div>
+                        <div class="part1">
+                            <img src="assets/ic_dentist.svg" alt="">
+                            <h3>طب الأسنان</h3>
+
+                        </div>
+                        <div class="part1">
+                            <img src="assets/ic_pharmacy.svg" alt="">
+                            <h3>الصيدلة</h3>
+
+                        </div>
+                        <div class="part1">
+                            <img src="assets/ic_nursing.svg" alt="">
+                            <h3>التمريض</h3>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="part1">
+                            <img src="assets/ic_It.svg" alt="">
+                            <h3>الهندسة المعلوماتية</h3>
+
+                        </div>
+                        <div class="part1">
+                            <img src="assets/ic_architecture.svg" alt="">
+                            <h3>الهندسة المعمارية</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="left">
+                    <h5>يمكنك تنزيل التطبيق و استخدامه اينما كنت
+                        متوفر على انظمة الاندرويد و الايفون</h5>
+                    <div class="buttons">
+                        <a href=""><img src="assets/store.png" alt=""></a>
+                        <a href=""><img src="assets/app.png" alt=""></a>
+                    </div>
+                </div>
+                <img src="assets/photo_2023-08-14_13-39-10.png" alt="">
+
+            </div>
+            <div class="footer">
+                <img src="assets/logo darebni.png" alt="">
+                <div class="condition">
+                    <div class="footer1">
+                        <h5>سياسة الخصوصية</h5>
+                        <h5>الشروط و الاستخدام</h5>
+                    </div>
+                    <div class="footer2">
+                        <div class="icons">
+                            <i class="fa-brands fa-facebook" style="color: #6F2877;"></i>
+                            <i class="fa-brands fa-instagram" style="color: #6F2877;"></i>
+
+                        </div>
+                        <h5>جميع الحقوق المحفوظة 2023</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center" *ngIf="loading">
+    <app-loader></app-loader>
+</div>

@@ -1,0 +1,85 @@
+
+<div class="container">
+
+<div class="image">
+    <img src="assets/signup.svg" alt="">
+</div>
+<div class="formcont">
+<div class="form">
+    <h2 id="registration">إنشاء حساب</h2>
+    <!-- <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()"> -->
+      <div formGroupName="persnalDetails">
+        <label for="fname">اسم المستخدم</label>
+        <input
+          type="text"
+          id="fname"
+          placeholder="Your name.."
+          formControlName="firstname"
+        />
+  
+  
+
+        <!-- <div>
+          <small *ngIf="reactiveForm.get('persnalDetails.lastname').errors?.['noSpaceAllowed'] && reactiveForm.get('persnalDetails.lastname').touched">Space Not Allowed</small>
+  
+        </div> -->
+  
+       
+  
+        <label for="numberPlate">رقم الموبايل</label>
+      <input type="text" id="numberPlate" formControlName="numberPlate" placeholder="enter phone number">
+      <!-- <div *ngIf="reactiveForm.get('persnalDetails.numberPlate').invalid && (reactiveForm.get('persnalDetails.numberPlate').dirty || reactiveForm.get('persnalDetails.numberPlate').touched)">
+        <small *ngIf="reactiveForm.get('persnalDetails.numberPlate').errors?.['required']">Number Plate is required.</small>
+        <small *ngIf="reactiveForm.get('persnalDetails.numberPlate').errors?.['pattern']">Invalid Number.</small>
+        <small *ngIf="reactiveForm.get('persnalDetails.numberPlate').errors?.['maxLength']">Number is long.</small>
+        <small *ngIf="reactiveForm.get('persnalDetails.numberPlate').errors?.['minLength']">Number is short.</small> -->
+  
+      </div>
+  
+        <div>
+          <!-- <small *ngIf="reactiveForm.get('persnalDetails.email').errors['email']">u must enter valid email</small> -->
+          <!-- <small *ngIf="reactiveForm.get('persnalDetails.email').errors['required'] && reactiveForm.get('persnalDetails.email').touched">email is required</small> -->
+  
+        </div>
+        
+      <!-- </div> -->
+  
+  
+  
+     
+      <br /><br />
+      <label>Hobbies <i>(Optional)</i></label>
+      <div class="form-inline">
+        <label
+          ><input type="checkbox" value="sports" formControlName="hobbies" />
+          Sports</label
+        >
+        <label
+          ><input type="checkbox" value="movies" formControlName="hobbies" />
+          Movies</label
+        >
+        <label
+          ><input type="checkbox" value="music" formControlName="hobbies" />
+          Music</label
+        >
+        <label
+        ><input type="checkbox" value="music" formControlName="hobbies" />
+        Music</label
+      >
+      <label
+      ><input type="checkbox" value="music" formControlName="hobbies" />
+      Music</label
+    >
+    <label
+    ><input type="checkbox" value="music" formControlName="hobbies" />
+    Music</label
+  >
+  
+      </div>
+      <div class="button">
+        <input type="submit" value="إنشاء حساب">
+      </div>
+      <div class="links">لديك حساب ؟ <a href="">سجل دخول</a></div>
+    </div>
+    </div>
+  

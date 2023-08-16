@@ -1,0 +1,59 @@
+<div class="row m-0 p-0">
+  <div class="container">
+    <div class="left">
+      <img src="assets/signup.svg" alt="login image">
+    </div>
+    <div class="right">
+      <div class="form">
+        <form [formGroup]="reactiveForm">
+          <h2 id="registration"> إنشاء حساب</h2>
+          <div class="details">
+            <label>
+              <h4>اسم المستخدم</h4>
+              <input type="text" formControlName="name" placeholder=" اسم المستخدم" >
+              <i class="fa fa-user" aria-hidden="true"></i>
+             
+              <div
+                *ngIf="reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)">
+                <small *ngIf="reactiveForm.controls['name'].errors['required']"> الرجاء ادخال اسم
+                  المستخدم</small>
+              </div>
+            </label>
+            <label>
+              <h4>رقم الموبايل</h4>
+              <input type="text" formControlName="number" placeholder=" +رقم الموبايل. مثال: *** *** ** 963">
+              <i class="fa-solid fa-phone"></i>
+            <div
+                *ngIf="reactiveForm.controls['number'].invalid && (reactiveForm.controls['number'].dirty || reactiveForm.controls['number'].touched)">
+                <small *ngIf="reactiveForm.controls['number']?.errors['required']"> الرجاء ادخال رقم
+                  الموبايل</small>
+                <small *ngIf="reactiveForm.controls['number']?.errors['pattern']">رقم الموبايل غير صالح </small>
+              </div>
+            </label>
+          </div>
+          <br /><br />
+          <div class="studies">
+            <h3>اختر الإختصاص</h3>
+            <div class="form-studies" >
+              <label for="radio">طب الأسنان <input type="radio" name="x"  formControlName="studies" /> </label>
+              <label for="radio"> الصيدلة <input type="radio" name="x" formControlName="studies" /></label>
+              <label for="radio">الهندسة المعمارية <input type="radio" name="x" formControlName="studies" /></label>
+              <label for="radio"> الهندسة المعلوماتية <input type="radio" name="x" formControlName="studies" /></label>
+              <label for="radio"> التمريض<input type="radio" name="x" formControlName="studies" /></label>
+              <label for="radio"> الطب البشري <input type="radio" name="x" formControlName="studies" /></label>
+
+            </div>
+            <div class="button">
+              <button type="submit" id="btn" routerLink="/login"> إنشاء حساب</button>
+            </div>
+            <div class="link">
+              ليس لديك حساب؟
+              <a href="" routerLink="/login" (click)="onSubmitReactiveForm()"> سجل الدخول
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
