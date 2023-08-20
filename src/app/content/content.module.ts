@@ -6,10 +6,11 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from '../shared/footer/footer.component';
-import { HeaderComponent } from '../shared/header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SliderComponent } from '../shared/slider/slider.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CourseComponent } from './course/course.component';
+import { OptionOfClassificationComponent } from './option-of-classification/option-of-classification.component';
 
 
 
@@ -17,6 +18,9 @@ import { SliderComponent } from '../shared/slider/slider.component';
   declarations: [
     ClassificationsComponent,
     HomeComponent,
+    CoursesComponent,
+    CourseComponent,
+    OptionOfClassificationComponent,
 
   ],
   imports: [
@@ -25,12 +29,12 @@ import { SliderComponent } from '../shared/slider/slider.component';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-        RouterModule,
-        AppRoutingModule,
+    RouterModule,
+    AppRoutingModule,
   ],
-  exports:[
-   HomeComponent,
-   SliderComponent
+  exports: [
+    HomeComponent,
+    SliderComponent,
   ]
 })
 export class ContentModule { }

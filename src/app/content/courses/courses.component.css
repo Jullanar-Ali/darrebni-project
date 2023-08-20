@@ -1,0 +1,24 @@
+.container{
+    padding-top: 30px;
+
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #464547;
+}
+a img{
+    margin-left: 0.5rem;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d5add8;
+    padding: 1.5rem 0.5rem;
+    font-size: 19px;
+    color: #464547;
+    border-radius: 5px;
+}
+.content2{
+    background-color: #B9E5FB;
+}

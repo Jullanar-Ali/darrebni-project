@@ -1,0 +1,48 @@
+.container{
+    padding-top: 30px;
+    padding-bottom: 4rem !important;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #464547;
+}
+a img{
+    margin-left: 0.5rem;
+}
+.line{
+    margin-left: 44rem;
+    font-size: 18px;
+}
+.content h1{
+    margin-right: 7rem;
+    color: #464547;
+    font-family: 'Alexandria';
+white-space: nowrap;
+font-weight: 200;
+font-size: 35px;
+
+}
+h2{
+    font-size: 40px;
+}
+p{
+    margin-right: 7rem;
+color: #923F98;  
+font-size: 18px;
+
+}
+.button{
+    text-align: center;
+    }
+.btn{
+    color: white;
+    padding: 0.5rem 5rem;
+    border-radius: 1;
+    font-size: 18px;
+    font-family: 'Alexandria';
+    font-weight: 200;
+    background-color: #6F2877;
+    }
+    
+        
