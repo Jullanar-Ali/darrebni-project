@@ -1,0 +1,39 @@
+.container{
+    padding-top: 50px;
+
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #464547;
+
+}
+a img{
+    margin-left: 0.5rem;
+}
+.content{
+margin:40px 300px;
+text-align: center;
+font-weight: 600;
+border-bottom: 1px solid #464547;
+}
+.line{
+    margin-left: 20rem;
+    font-weight: 600;
+}
+.mx{
+    margin-right: 10rem;
+}
+.button{
+text-align: center;
+}
+.btn {
+    border: none;
+    color: white;
+    width: 45%;
+    background-color: #6F2877;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+
+}

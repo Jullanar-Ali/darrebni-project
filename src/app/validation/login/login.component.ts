@@ -13,7 +13,7 @@ export class LoginComponent {
   code: string;
   loading:boolean=false;
 
-  constructor(private service:ValidationService) { }
+  constructor(private ValidationService:ValidationService) { }
 
  
 
@@ -29,14 +29,14 @@ export class LoginComponent {
 
   onSubmitReactiveForm() {
     this.loading=true;
-
-//     this.service.login().subscribe((res: any) => {
-//       console.log(res)
-
-//     }, error => {
-//       alert(error.message);
-//     })
-// }
+  }
+  onSubmit() {
+    this.ValidationService.login(this.name, this.code)
+      .subscribe(response => {
+console.log(response)      
+}, error => {
+        // handle login error
+      });
   }
 }
 

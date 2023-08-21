@@ -5,17 +5,13 @@
         </div>
         <div class="right">
             <div class="form">
-                <form [formGroup]="reactiveForm">
+                <form [formGroup]="reactiveForm"  (ngSubmit)="onSubmit()">
                     <h2 id="registration">تسجيل الدخول </h2>
                     <div class="details">
                         <label>
                             <h4>اسم المستخدم</h4>
                             <input type="text" formControlName="name" placeholder=" اسم المستخدم">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <!-- <mat-form-field>
-                                <mat-icon matPrefix><i class="fa fa-user" aria-hidden="true"></i></mat-icon>
-                                <input matInput placeholder=" اسم المستخدم ">
-                              </mat-form-field> -->
+                            <i class="fa fa-user" aria-hidden="true" [(ngModel)]="name"></i>
                             <div
                                 *ngIf="reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)">
                                 <small *ngIf="reactiveForm.controls['name'].errors['required']"> الرجاء ادخال اسم
@@ -25,7 +21,7 @@
                         <label>
                             <h4>رمز الدخول</h4>
                             <input type="text" formControlName="code" placeholder="رمز الدخول">
-                            <i class="fa fa-key" aria-hidden="true"></i>
+                            <i class="fa fa-key" aria-hidden="true"  [(ngModel)]="code"></i>
                             <div
                                 *ngIf="reactiveForm.controls['code'].invalid && (reactiveForm.controls['code'].dirty || reactiveForm.controls['code'].touched)">
                                 <small *ngIf="reactiveForm.controls['code']?.errors['required']"> الرجاء ادخال رمز
@@ -38,7 +34,7 @@
                     </div>
 
                     <div class="button">
-                        <button type="submit" id="btn" routerLink="/home">تسجيل الدخول</button>
+                        <button type="submit" id="btn">تسجيل الدخول</button>
                     </div>
                     <div class="link">
                         ليس لديك حساب؟

@@ -6,13 +6,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ValidationService {
-  private apiUrl = 'http://your-api-url.com';
+  private apiUrl = 'https://backendsp01.000webhostapp.com/api';
   constructor(private http: HttpClient) { }
 
 login(name:string, code:string) {
-  const body = { username: name, code: code };
-  // return this.http.post(${this.apiUrl}/login, body);
+  const body = { name: name, code: code };
+  return this.http.post('${this.apiUrl}/login', body);
 }
+
 }
 
 

@@ -1,0 +1,49 @@
+.container{
+    border: 3px solid #6F2877;
+    border-radius: 10px;
+    width: 50%;
+    height: 78%;
+}
+h2{
+    font-size: 25px;
+
+}
+p{
+    color: #464547;
+}
+.option{
+    font-size: 17px;
+    border: 1px solid #464547;
+    border-radius: 5px;
+    color: #464547;
+    margin-left: 2rem;
+    margin-right: 1rem;
+
+    font-weight: 400;
+    
+}
+.foot{
+    align-items: center;
+    white-space: nowrap;
+}
+.btn{
+    border: 1px solid #6F2877;
+    margin-left: 2rem;
+    color: #464547;
+    font-weight: bold;
+
+
+}
+.icons img{
+    width: 20%;
+}
+.btn1 {
+    border: none;
+    color: white;
+    width: 30%;
+    background-color: #6F2877;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+margin-right: 28rem;
+}

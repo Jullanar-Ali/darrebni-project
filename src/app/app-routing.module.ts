@@ -8,6 +8,7 @@ import { CoursesComponent } from './content/courses/courses.component';
 import { CourseComponent } from './content/course/course.component';
 import { OptionOfClassificationComponent } from './content/option-of-classification/option-of-classification.component';
 import { QuestionComponent } from './questions/question/question.component';
+import { ResaultComponent } from './questions/resault/resault.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -16,10 +17,11 @@ const routes: Routes = [
   {path:"register", component:RegisterComponent},
   {path:"classification", component:ClassificationsComponent},
   {path:"question", component:QuestionComponent},
+  {path:"resault", component:ResaultComponent},
   {path:"option", component: OptionOfClassificationComponent},
   {path:"courses", component:CoursesComponent},
   {path:"course", component:CourseComponent},
-
+  
 
 
 
