@@ -20,7 +20,7 @@ export class RegisterComponent {
 
     this.reactiveForm = new FormGroup({
       name:new FormControl('',Validators.required),
-      number:new FormControl('',[Validators.required,Validators.pattern(/^09\d{8}$/)]),
+      phone:new FormControl('',[Validators.required,Validators.pattern(/^09\d{8}$/)]),
       studies: new FormControl('',Validators.required),
 
     })
@@ -29,8 +29,8 @@ export class RegisterComponent {
   onSubmitReactiveForm() {
     let body = {
       name: this.reactiveForm.value.name,
-      phone: this.reactiveForm.value.code,
-      college_id: this.reactiveForm.value.code,
+      phone: this.reactiveForm.value.phone,
+      college_id: this.reactiveForm.value.college_id,
 
     };
     this.ValidationService.register(body)

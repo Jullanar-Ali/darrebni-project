@@ -8,39 +8,39 @@
         <form [formGroup]="reactiveForm">
           <h2 id="registration"> إنشاء حساب</h2>
           <div class="details">
-            <label>
-              <h4>اسم المستخدم</h4>
-              <input type="text" formControlName="name" placeholder=" اسم المستخدم" >
-              <i class="fa fa-user" aria-hidden="true"></i>
-             
-              <div
-                *ngIf="reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)">
-                <small *ngIf="reactiveForm.controls['name'].errors['required']"> الرجاء ادخال اسم
-                  المستخدم</small>
-              </div>
+            <label for="name">
+              اسم المستخدم
             </label>
-            <label>
-              <h4>رقم الموبايل</h4>
-              <input type="text" formControlName="phone" placeholder=" +رقم الموبايل. مثال: *** *** ** 963">
-              <i class="fa-solid fa-phone"></i>
+            <input type="text" formControlName="name" placeholder=" اسم المستخدم" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+           
             <div
-                *ngIf="reactiveForm.controls['phone'].invalid && (reactiveForm.controls['phone'].dirty || reactiveForm.controls['phone'].touched)">
-                <small *ngIf="reactiveForm.controls['phone']?.errors['required']"> الرجاء ادخال رقم
-                  الموبايل</small>
-                <small *ngIf="reactiveForm.controls['phone']?.errors['pattern']">رقم الموبايل غير صالح </small>
-              </div>
+              *ngIf="reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)">
+              <small *ngIf="reactiveForm.controls['name'].errors['required']"> الرجاء ادخال اسم
+                المستخدم</small>
+            </div>
+            <label for="phone">
+          رقم الموبايل
             </label>
+            <input type="text" formControlName="phone" placeholder=" +رقم الموبايل. مثال: *** *** ** 963">
+            <i class="fa-solid fa-phone"></i>
+          <div
+              *ngIf="reactiveForm.controls['phone'].invalid && (reactiveForm.controls['phone'].dirty || reactiveForm.controls['phone'].touched)">
+              <small *ngIf="reactiveForm.controls['phone']?.errors['required']"> الرجاء ادخال رقم
+                الموبايل</small>
+              <small *ngIf="reactiveForm.controls['phone']?.errors['pattern']">رقم الموبايل غير صالح </small>
+            </div>
           </div>
           <br /><br />
           <div class="studies">
             <h3>اختر الإختصاص</h3>
             <div class="form-studies" >
-              <label for="radio">طب الأسنان <input type="radio" name="college_id"  formControlName="studies" /> </label>
-              <label for="radio"> الصيدلة <input type="radio" name="college_id" formControlName="studies" /></label>
-              <label for="radio">الهندسة المعمارية <input type="radio" name="college_id" formControlName="studies" /></label>
-              <label for="radio"> الهندسة المعلوماتية <input type="radio" name="college_id" formControlName="studies" /></label>
-              <label for="radio"> التمريض<input type="radio" name="college_id" formControlName="studies" /></label>
-              <label for="radio"> الطب البشري <input type="radio" name="college_id" formControlName="studies" /></label>
+              <label for="studies">طب الأسنان <input type="radio" value="طب الأسنان"  formControlName="studies" /> </label>
+              <label for="studies"> الصيدلة <input type="radio" value="الصيدلة" formControlName="studies" /></label>
+              <label for="studies">الهندسة المعمارية <input type="radio" value="الهندسة المعمارية " formControlName="studies" /></label>
+              <label for="studies"> الهندسة المعلوماتية <input type="radio" value="الهندسة المعلوماتية " formControlName="studies" /></label>
+              <label for="studies"> التمريض<input type="radio" value="التمريض" formControlName="studies" /></label>
+              <label for="studies"> الطب البشري <input type="radio" value="الطب البشري" formControlName="studies" /></label>
 
             </div>
             <div class="button">

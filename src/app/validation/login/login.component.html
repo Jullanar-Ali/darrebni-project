@@ -5,32 +5,32 @@
         </div>
         <div class="right">
             <div class="form">
-                <form [formGroup]="reactiveForm"  (ngSubmit)="onSubmit()">
+                <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
                     <h2 id="registration">تسجيل الدخول </h2>
                     <div class="details">
-                        <label>
-                            <h4>اسم المستخدم</h4>
-                            <input type="text" formControlName="name" placeholder=" اسم المستخدم">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <div
-                                *ngIf="reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)">
-                                <small *ngIf="reactiveForm.controls['name'].errors['required']"> الرجاء ادخال اسم
-                                    المستخدم</small>
-                            </div>
+                        <label for="name">
+                            اسم المستخدم
                         </label>
-                        <label>
-                            <h4>رمز الدخول</h4>
-                            <input type="text" formControlName="code" placeholder="رمز الدخول">
-                            <i class="fa fa-key" aria-hidden="true"></i>
-                            <div
-                                *ngIf="reactiveForm.controls['code'].invalid && (reactiveForm.controls['code'].dirty || reactiveForm.controls['code'].touched)">
-                                <small *ngIf="reactiveForm.controls['code']?.errors['required']"> الرجاء ادخال رمز
-                                    الدخول</small>
-                                <small *ngIf="reactiveForm.controls['code']?.errors['minlength']">رمز الدخول يجب ان يكون
-                                    10 ارقام على الاقل</small>
+                        <input type="text" formControlName="name" placeholder=" اسم المستخدم">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <div
+                            *ngIf="reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched)">
+                            <small *ngIf="reactiveForm.controls['name'].errors['required']"> الرجاء ادخال اسم
+                                المستخدم</small>
+                        </div>
+                        <label for="code">
+                            رمز الدخول
+                        </label>
+                        <input type="text" formControlName="code" placeholder="رمز الدخول">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <div
+                            *ngIf="reactiveForm.controls['code'].invalid && (reactiveForm.controls['code'].dirty || reactiveForm.controls['code'].touched)">
+                            <small *ngIf="reactiveForm.controls['code']?.errors['required']"> الرجاء ادخال رمز
+                                الدخول</small>
+                            <small *ngIf="reactiveForm.controls['code']?.errors['minlength']">رمز الدخول يجب ان يكون
+                                10 ارقام على الاقل</small>
 
-                            </div>
-                        </label>
+                        </div>
                     </div>
 
                     <div class="button">
