@@ -10,10 +10,10 @@ import { ValidationService } from '../services/validation.service';
 export class RegisterComponent {
   reactiveForm!: FormGroup;
   name: string;
-  number: string;
-  constructor(private service:ValidationService) { }
+  phone: string;
+  college_id:string;
+  constructor(private ValidationService: ValidationService) { }
 
- 
 
   ngOnInit() {
   
@@ -21,19 +21,24 @@ export class RegisterComponent {
     this.reactiveForm = new FormGroup({
       name:new FormControl('',Validators.required),
       number:new FormControl('',[Validators.required,Validators.pattern(/^09\d{8}$/)]),
-      specialty: new FormControl('',Validators.required),
+      studies: new FormControl('',Validators.required),
 
     })
 
   }
   onSubmitReactiveForm() {
-    //     this.service.login().subscribe((res: any) => {
-    //       console.log(res)
-    
-    //     }, error => {
-    //       alert(error.message);
-    //     })
-    // }
-      }
+    let body = {
+      name: this.reactiveForm.value.name,
+      phone: this.reactiveForm.value.code,
+      college_id: this.reactiveForm.value.code,
+
+    };
+    this.ValidationService.register(body)
+      .subscribe(response => {
+        console.log(response)
+      }, error => {
+        // handle login error
+      });
+  }
     }
 

@@ -11,30 +11,34 @@ export class LoginComponent {
   reactiveForm!: FormGroup;
   name: string;
   code: string;
-  loading:boolean=false;
+  loading: boolean = false;
 
-  constructor(private ValidationService:ValidationService) { }
+  constructor(private ValidationService: ValidationService) { }
 
- 
+
 
   ngOnInit() {
-  
+
 
     this.reactiveForm = new FormGroup({
-      name:new FormControl('',Validators.required),
-      code:new FormControl('',[Validators.required,Validators.minLength(10)]),
+      name: new FormControl('', Validators.required),
+      code: new FormControl('', [Validators.required, Validators.minLength(10)]),
     })
 
   }
 
   onSubmitReactiveForm() {
-    this.loading=true;
+    this.loading = true;
   }
   onSubmit() {
-    this.ValidationService.login(this.name, this.code)
+    let body = {
+      name: this.reactiveForm.value.name,
+      code: this.reactiveForm.value.code
+    };
+    this.ValidationService.login(body)
       .subscribe(response => {
-console.log(response)      
-}, error => {
+        console.log(response)
+      }, error => {
         // handle login error
       });
   }

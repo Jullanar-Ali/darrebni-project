@@ -21,13 +21,13 @@
             </label>
             <label>
               <h4>رقم الموبايل</h4>
-              <input type="text" formControlName="number" placeholder=" +رقم الموبايل. مثال: *** *** ** 963">
+              <input type="text" formControlName="phone" placeholder=" +رقم الموبايل. مثال: *** *** ** 963">
               <i class="fa-solid fa-phone"></i>
             <div
-                *ngIf="reactiveForm.controls['number'].invalid && (reactiveForm.controls['number'].dirty || reactiveForm.controls['number'].touched)">
-                <small *ngIf="reactiveForm.controls['number']?.errors['required']"> الرجاء ادخال رقم
+                *ngIf="reactiveForm.controls['phone'].invalid && (reactiveForm.controls['phone'].dirty || reactiveForm.controls['phone'].touched)">
+                <small *ngIf="reactiveForm.controls['phone']?.errors['required']"> الرجاء ادخال رقم
                   الموبايل</small>
-                <small *ngIf="reactiveForm.controls['number']?.errors['pattern']">رقم الموبايل غير صالح </small>
+                <small *ngIf="reactiveForm.controls['phone']?.errors['pattern']">رقم الموبايل غير صالح </small>
               </div>
             </label>
           </div>
@@ -35,12 +35,12 @@
           <div class="studies">
             <h3>اختر الإختصاص</h3>
             <div class="form-studies" >
-              <label for="radio">طب الأسنان <input type="radio" name="x"  formControlName="studies" /> </label>
-              <label for="radio"> الصيدلة <input type="radio" name="x" formControlName="studies" /></label>
-              <label for="radio">الهندسة المعمارية <input type="radio" name="x" formControlName="studies" /></label>
-              <label for="radio"> الهندسة المعلوماتية <input type="radio" name="x" formControlName="studies" /></label>
-              <label for="radio"> التمريض<input type="radio" name="x" formControlName="studies" /></label>
-              <label for="radio"> الطب البشري <input type="radio" name="x" formControlName="studies" /></label>
+              <label for="radio">طب الأسنان <input type="radio" name="college_id"  formControlName="studies" /> </label>
+              <label for="radio"> الصيدلة <input type="radio" name="college_id" formControlName="studies" /></label>
+              <label for="radio">الهندسة المعمارية <input type="radio" name="college_id" formControlName="studies" /></label>
+              <label for="radio"> الهندسة المعلوماتية <input type="radio" name="college_id" formControlName="studies" /></label>
+              <label for="radio"> التمريض<input type="radio" name="college_id" formControlName="studies" /></label>
+              <label for="radio"> الطب البشري <input type="radio" name="college_id" formControlName="studies" /></label>
 
             </div>
             <div class="button">

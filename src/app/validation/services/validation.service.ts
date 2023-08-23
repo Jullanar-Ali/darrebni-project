@@ -9,11 +9,14 @@ export class ValidationService {
   private apiUrl = 'https://backendsp01.000webhostapp.com/api';
   constructor(private http: HttpClient) { }
 
-login(name:string, code:string) {
-  const body = { name: name, code: code };
-  return this.http.post('${this.apiUrl}/login', body);
+login(body:any) {
+  return this.http.post(`https://backendsp01.000webhostapp.com/api/login`,body);
 }
+register(body:any){
 
+  return this.http.post(`https://backendsp01.000webhostapp.com/api/register`,body);
+
+}
 }
 
 
